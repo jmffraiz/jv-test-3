@@ -1,0 +1,286 @@
+{
+  "blockPalette": [
+    {
+      "name": "hero",
+      "source": "block-collection",
+      "description": "Full-width hero section with background image, heading, and optional subheading text. Used at the top of most pages.",
+      "contentModel": "Row 1: background image | Row 2: heading + text overlay",
+      "liveExample": "https://main--aem-block-collection--adobe.aem.live/block-collection/hero"
+    },
+    {
+      "name": "cards",
+      "source": "block-collection",
+      "description": "Grid layout of feature/value proposition cards with icon, heading, and description text. Used for 'Why JUVÉDERM' USP sections.",
+      "contentModel": "Each row: image/icon | heading + description text",
+      "liveExample": "https://main--aem-block-collection--adobe.aem.live/block-collection/cards"
+    },
+    {
+      "name": "carousel",
+      "source": "block-collection",
+      "description": "Rotating product showcase slider. Used to display JUVÉDERM product range with product image, name, and description.",
+      "contentModel": "Each row: product image | product name + description text",
+      "liveExample": "https://main--aem-block-collection--adobe.aem.live/block-collection/carousel"
+    },
+    {
+      "name": "before-after",
+      "source": "custom",
+      "description": "Before/After photo comparison component. Shows side-by-side before and after treatment photos with labels.",
+      "contentModel": "Row 1: before image + 'Voor' label | after image + 'Na' label"
+    },
+    {
+      "name": "accordion",
+      "source": "block-collection",
+      "description": "Expandable/collapsible FAQ sections. Question as trigger, answer content expands on click.",
+      "contentModel": "Each row: question heading | answer text (can include lists, links)",
+      "liveExample": "https://main--aem-block-collection--adobe.aem.live/block-collection/accordion"
+    },
+    {
+      "name": "tabs",
+      "source": "block-collection",
+      "description": "Tabbed content panels for toggling between male/female treatment areas. Each tab contains treatment cards.",
+      "contentModel": "Row 1: tab label | tab content (heading + text + link). Multiple rows per tab.",
+      "liveExample": "https://main--aem-block-collection--adobe.aem.live/block-collection/tabs"
+    },
+    {
+      "name": "columns",
+      "source": "block-collection",
+      "description": "Side-by-side content columns. Used for image + text layouts in FAQ and content sections.",
+      "contentModel": "Row 1: column 1 content | column 2 content",
+      "liveExample": "https://main--aem-block-collection--adobe.aem.live/block-collection/columns"
+    },
+    {
+      "name": "fragment",
+      "source": "block-collection",
+      "description": "Reusable content section that can be embedded across pages. Used for shared treatment tabs and clinic finder sections.",
+      "contentModel": "Row 1: link to fragment page",
+      "liveExample": "https://main--aem-block-collection--adobe.aem.live/block-collection/fragment"
+    }
+  ],
+  "archetypeBlueprints": {
+    "homepage": [
+      {
+        "name": "Hero Section",
+        "sections": [
+          {
+            "description": "Full-width hero with key visual and main headline",
+            "sequences": ["hero"]
+          }
+        ]
+      },
+      {
+        "name": "Why JUVÉDERM",
+        "sections": [
+          {
+            "description": "Value proposition grid with heading and 4 USP cards (natural look, leading brand, lasting results, satisfaction)",
+            "sequences": ["default", "cards"]
+          }
+        ]
+      },
+      {
+        "name": "Before/After Results",
+        "sections": [
+          {
+            "description": "Before/after photo comparison slider with 3 patient examples",
+            "sequences": ["default", "before-after"]
+          }
+        ]
+      },
+      {
+        "name": "Treatment Areas",
+        "sections": [
+          {
+            "description": "Tabbed treatment area selector (female/male) with treatment cards",
+            "sequences": ["default", "tabs"]
+          }
+        ]
+      },
+      {
+        "name": "Clinic Finder",
+        "sections": [
+          {
+            "description": "Clinic finder search with location input",
+            "sequences": ["default"]
+          }
+        ]
+      },
+      {
+        "name": "References",
+        "sections": [
+          {
+            "description": "Scientific references footnotes",
+            "sequences": ["default"]
+          }
+        ]
+      }
+    ],
+    "treatment": [
+      {
+        "name": "Hero Section",
+        "sections": [
+          {
+            "description": "Hero with treatment-specific image and headline",
+            "sequences": ["hero"]
+          }
+        ]
+      },
+      {
+        "name": "Treatment Intro",
+        "sections": [
+          {
+            "description": "Intro text with image and 3 USP feature cards",
+            "sequences": ["default", "columns"]
+          }
+        ]
+      },
+      {
+        "name": "Before/After",
+        "sections": [
+          {
+            "description": "Before/after comparison photos",
+            "sequences": ["default", "before-after"]
+          }
+        ]
+      },
+      {
+        "name": "Product Carousel",
+        "sections": [
+          {
+            "description": "Carousel of relevant JUVÉDERM products with descriptions",
+            "sequences": ["default", "carousel"]
+          }
+        ]
+      },
+      {
+        "name": "FAQ Accordion",
+        "sections": [
+          {
+            "description": "FAQ accordion with image and expandable Q&A items",
+            "sequences": ["columns", "accordion"]
+          }
+        ]
+      },
+      {
+        "name": "Treatment Areas",
+        "sections": [
+          {
+            "description": "Shared treatment area tabs (male/female)",
+            "sequences": ["fragment"]
+          }
+        ]
+      },
+      {
+        "name": "Clinic Finder",
+        "sections": [
+          {
+            "description": "Shared clinic finder section",
+            "sequences": ["fragment"]
+          }
+        ]
+      },
+      {
+        "name": "References",
+        "sections": [
+          {
+            "description": "Scientific references footnotes",
+            "sequences": ["default"]
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "name": "Hero Section",
+        "sections": [
+          {
+            "description": "Hero with FAQ page image and headline",
+            "sequences": ["hero"]
+          }
+        ]
+      },
+      {
+        "name": "Topic Navigation",
+        "sections": [
+          {
+            "description": "Topic filter/anchor links",
+            "sequences": ["default"]
+          }
+        ]
+      },
+      {
+        "name": "FAQ Content Sections",
+        "sections": [
+          {
+            "description": "Multiple Q&A sections with images, organized by topic. Uses columns for image+text layout and default content for body text.",
+            "sequences": ["default", "columns"]
+          }
+        ]
+      },
+      {
+        "name": "References",
+        "sections": [
+          {
+            "description": "Scientific references footnotes",
+            "sequences": ["default"]
+          }
+        ]
+      }
+    ],
+    "find-a-clinic": [
+      {
+        "name": "Clinic Finder Page",
+        "sections": [
+          {
+            "description": "Main heading with clinic finder form and city quick-links",
+            "sequences": ["default", "columns"]
+          }
+        ]
+      }
+    ],
+    "legal": [
+      {
+        "name": "Legal Content",
+        "sections": [
+          {
+            "description": "Simple text content with heading and body text. No blocks needed.",
+            "sequences": ["default"]
+          }
+        ]
+      }
+    ]
+  },
+  "siteConventions": {
+    "language": "nl-NL",
+    "contentPath": "/nl/",
+    "brandName": "JUVÉDERM®",
+    "typography": {
+      "headingStyle": "Clean sans-serif, minimal uppercase use",
+      "bodyFont": "System sans-serif stack"
+    },
+    "colors": {
+      "primary": "#8B1A4A (burgundy/wine)",
+      "secondary": "#F5F0EB (warm cream/beige)",
+      "accent": "#C4A35A (gold)",
+      "text": "#333333",
+      "background": "#FFFFFF"
+    },
+    "patterns": {
+      "sharedSections": [
+        "Treatment area tabs (male/female) — appears on homepage and all treatment pages",
+        "Clinic finder widget — appears on homepage and all treatment pages",
+        "Footer disclaimer with warning icon — appears on every page"
+      ],
+      "footnotes": "All pages contain scientific reference footnotes (numbered superscript citations)",
+      "ctaPattern": "'Vind je kliniek' (Find your clinic) is the primary CTA throughout the site",
+      "beforeAfterPattern": "Before/after photos appear on homepage and all treatment pages with identical layout"
+    },
+    "navigation": {
+      "headerType": "Sticky header with logo, dropdown menus (Behandeling, FAQ), and CTA button",
+      "footerType": "Footer with treatment links, FAQ links, legal links, social icons, and regulatory disclaimer"
+    },
+    "regulatory": {
+      "disclaimer": "Every page includes regulatory disclaimer from AbbVie with product references",
+      "warningBanner": "Footer warning: 'Kijk uit. Jezelf mooier maken kan lelijk uitpakken. Een geslaagde ingreep begint bij een goede arts.'",
+      "approvalCode": "NL-JUV-230072"
+    }
+  }
+}
