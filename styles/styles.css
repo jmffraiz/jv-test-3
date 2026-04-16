@@ -11,13 +11,13 @@
  */
 
 :root {
-  /* colors */
+  /* colors - JUVÉDERM brand */
   --background-color: white;
-  --light-color: #f8f8f8;
+  --light-color: #f5f0eb;
   --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  --text-color: #333;
+  --link-color: #8b1a4a;
+  --link-hover-color: #6d1439;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;

@@ -1,0 +1,54 @@
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordion .accordion-item {
+  border-bottom: 1px solid var(--light-color, #eee);
+}
+
+.accordion .accordion-item details {
+  padding: 0;
+}
+
+.accordion .accordion-item summary {
+  padding: 16px 40px 16px 0;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  font-weight: 600;
+  font-size: var(--body-font-size-m, 18px);
+}
+
+.accordion .accordion-item summary::marker,
+.accordion .accordion-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion .accordion-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+}
+
+.accordion .accordion-item details[open] > summary::after {
+  content: '−';
+}
+
+.accordion .accordion-item .accordion-item-body {
+  padding: 0 0 16px;
+  line-height: 1.6;
+}
+
+.accordion .accordion-item .accordion-item-body ul {
+  padding-left: 20px;
+}
+
+.accordion .accordion-item .accordion-item-body p {
+  margin-bottom: 8px;
+}
